@@ -1,0 +1,375 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ExchangeWallet Component ExchangeWallet matches snapshot 1`] = `
+<section
+  className="sc-AxiKw dGZWJM"
+>
+  <div
+    className="container"
+  >
+    <div
+      className="row"
+    >
+      <div
+        className="col-lg"
+      >
+        <div
+          className="sc-AxhCb bjIare card"
+        >
+          <div
+            className="card-body"
+          >
+            <div
+              className="sc-AxirZ dLMRmj"
+              data-testid="select"
+            >
+              
+              <select
+                className="form-control"
+                id="input"
+                onChange={[Function]}
+                value="USD"
+              >
+                <option
+                  disabled={false}
+                  value="USD"
+                >
+                  $
+                   
+                  USD
+                </option>
+                <option
+                  disabled={true}
+                  value="EUR"
+                >
+                  €
+                   
+                  EUR
+                </option>
+                <option
+                  disabled={false}
+                  value="GBP"
+                >
+                  £
+                   
+                  GBP
+                </option>
+              </select>
+              <svg>
+                arrow-down.svg
+              </svg>
+            </div>
+            <p
+              className="pills"
+            >
+              Wallet Balance
+            </p>
+            <h1>
+              $
+               
+              400.00
+            </h1>
+          </div>
+          <div
+            className="conversion__card"
+          >
+            <div
+              className="sc-AxjAm boKlPC"
+              data-testid="input"
+            >
+              <label
+                htmlFor="Exchange USD -> EUR"
+              >
+                Exchange USD -&gt; EUR
+              </label>
+              <input
+                className="form-control"
+                data-testid="inputs"
+                id="0"
+                name="from"
+                onChange={[Function]}
+                placeholder="0.00"
+                type="number"
+                value=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="col-lg-2 d-md-flex align-items-center my-5 my-md-0"
+      >
+        <button
+          className="btn btn-primary btn-block"
+          disabled={false}
+          onClick={[Function]}
+          type="button"
+        >
+          Exchange
+        </button>
+      </div>
+      <div
+        className="col-lg"
+      >
+        <div
+          className="sc-AxhCb bjIare card"
+        >
+          <div
+            className="card-body"
+          >
+            <div
+              className="sc-AxirZ dLMRmj"
+              data-testid="select"
+            >
+              
+              <select
+                className="form-control"
+                id="input"
+                onChange={[Function]}
+                value="EUR"
+              >
+                <option
+                  disabled={true}
+                  value="USD"
+                >
+                  $
+                   
+                  USD
+                </option>
+                <option
+                  disabled={false}
+                  value="EUR"
+                >
+                  €
+                   
+                  EUR
+                </option>
+                <option
+                  disabled={false}
+                  value="GBP"
+                >
+                  £
+                   
+                  GBP
+                </option>
+              </select>
+              <svg>
+                arrow-down.svg
+              </svg>
+            </div>
+            <p
+              className="pills"
+            >
+              Wallet Balance
+            </p>
+            <h1>
+              €
+               
+              700.00
+            </h1>
+          </div>
+          <div
+            className="conversion__card"
+          >
+            <p>
+              You Get
+            </p>
+            <h4>
+              €
+               
+              0.000
+            </h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+`;
+
+exports[`ExchangeWallet Component ExchangeWallet matches snapshot without actions 1`] = `
+<section
+  className="sc-AxiKw dGZWJM"
+>
+  <div
+    className="container"
+  >
+    <div
+      className="row"
+    >
+      <div
+        className="col-lg"
+      >
+        <div
+          className="sc-AxhCb bjIare card"
+        >
+          <div
+            className="card-body"
+          >
+            <div
+              className="sc-AxirZ dLMRmj"
+              data-testid="select"
+            >
+              
+              <select
+                className="form-control"
+                id="input"
+                onChange={[Function]}
+                value="USD"
+              >
+                <option
+                  disabled={false}
+                  value="USD"
+                >
+                  $
+                   
+                  USD
+                </option>
+                <option
+                  disabled={true}
+                  value="EUR"
+                >
+                  €
+                   
+                  EUR
+                </option>
+                <option
+                  disabled={false}
+                  value="GBP"
+                >
+                  £
+                   
+                  GBP
+                </option>
+              </select>
+              <svg>
+                arrow-down.svg
+              </svg>
+            </div>
+            <p
+              className="pills"
+            >
+              Wallet Balance
+            </p>
+            <h1>
+              $
+               
+              400.00
+            </h1>
+          </div>
+          <div
+            className="conversion__card"
+          >
+            <div
+              className="sc-AxjAm boKlPC"
+              data-testid="input"
+            >
+              <label
+                htmlFor="Exchange USD -> EUR"
+              >
+                Exchange USD -&gt; EUR
+              </label>
+              <input
+                className="form-control"
+                data-testid="inputs"
+                id="0"
+                name="from"
+                onChange={[Function]}
+                placeholder="0.00"
+                type="number"
+                value=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="col-lg-2 d-md-flex align-items-center my-5 my-md-0"
+      >
+        <button
+          className="btn btn-primary btn-block"
+          disabled={false}
+          onClick={[Function]}
+          type="button"
+        >
+          Exchange
+        </button>
+      </div>
+      <div
+        className="col-lg"
+      >
+        <div
+          className="sc-AxhCb bjIare card"
+        >
+          <div
+            className="card-body"
+          >
+            <div
+              className="sc-AxirZ dLMRmj"
+              data-testid="select"
+            >
+              
+              <select
+                className="form-control"
+                id="input"
+                onChange={[Function]}
+                value="EUR"
+              >
+                <option
+                  disabled={true}
+                  value="USD"
+                >
+                  $
+                   
+                  USD
+                </option>
+                <option
+                  disabled={false}
+                  value="EUR"
+                >
+                  €
+                   
+                  EUR
+                </option>
+                <option
+                  disabled={false}
+                  value="GBP"
+                >
+                  £
+                   
+                  GBP
+                </option>
+              </select>
+              <svg>
+                arrow-down.svg
+              </svg>
+            </div>
+            <p
+              className="pills"
+            >
+              Wallet Balance
+            </p>
+            <h1>
+              €
+               
+              700.00
+            </h1>
+          </div>
+          <div
+            className="conversion__card"
+          >
+            <p>
+              You Get
+            </p>
+            <h4>
+              €
+               
+              0.000
+            </h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+`;

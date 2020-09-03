@@ -1,0 +1,121 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Exchange Reducer exchanges currency and update wallet and its balance 1`] = `
+Object {
+  "currentRate": 0.8342370902,
+  "from": "USD",
+  "isLoading": false,
+  "to": "EUR",
+  "wallet": Object {
+    "EUR": Object {
+      "amount": 800,
+    },
+    "GBP": Object {
+      "amount": 700,
+    },
+    "USD": Object {
+      "amount": 500,
+    },
+  },
+}
+`;
+
+exports[`Exchange Reducer fail in getting currency and latest rates 1`] = `
+Object {
+  "currentRate": 0.8342370902,
+  "from": "USD",
+  "isLoading": false,
+  "to": "EUR",
+  "wallet": Object {
+    "EUR": Object {
+      "amount": 700,
+    },
+    "GBP": Object {
+      "amount": 500,
+    },
+    "USD": Object {
+      "amount": 400,
+    },
+  },
+}
+`;
+
+exports[`Exchange Reducer start get currency and latest rates 1`] = `
+Object {
+  "currentRate": 0.8342370902,
+  "from": "USD",
+  "isLoading": true,
+  "to": "EUR",
+  "wallet": Object {
+    "EUR": Object {
+      "amount": 700,
+    },
+    "GBP": Object {
+      "amount": 500,
+    },
+    "USD": Object {
+      "amount": 400,
+    },
+  },
+}
+`;
+
+exports[`Exchange Reducer successfully get currency and latest rates 1`] = `
+Object {
+  "currentRate": 100,
+  "from": "USD",
+  "isLoading": false,
+  "to": "EUR",
+  "wallet": Object {
+    "EUR": Object {
+      "amount": 700,
+    },
+    "GBP": Object {
+      "amount": 500,
+    },
+    "USD": Object {
+      "amount": 400,
+    },
+  },
+}
+`;
+
+exports[`Exchange Reducer update FROM wallet 1`] = `
+Object {
+  "currentRate": 0.8342370902,
+  "from": "USD",
+  "isLoading": false,
+  "to": "EUR",
+  "wallet": Object {
+    "EUR": Object {
+      "amount": 700,
+    },
+    "GBP": Object {
+      "amount": 500,
+    },
+    "USD": Object {
+      "amount": 400,
+    },
+  },
+}
+`;
+
+exports[`Exchange Reducer update TO wallet 1`] = `
+Object {
+  "currentRate": 0.8342370902,
+  "from": "USD",
+  "isLoading": false,
+  "to": "USD",
+  "wallet": Object {
+    "EUR": Object {
+      "amount": 700,
+    },
+    "GBP": Object {
+      "amount": 500,
+    },
+    "USD": Object {
+      "amount": 400,
+    },
+  },
+}
+`;

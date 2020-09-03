@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RateSlate Component RateSlate matches snapshot 1`] = `
+<h4
+  className="sc-AxjAm jCIwtX"
+>
+  1
+  $
+   = 
+  100.000
+  €
+</h4>
+`;
+
+exports[`RateSlate Component RateSlate matches snapshot without actions 1`] = `
+<h4
+  className="sc-AxjAm jCIwtX"
+>
+  1
+  $
+   = 
+  100.000
+  €
+</h4>
+`;

@@ -1,0 +1,79 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Select Component Select matches snapshot 1`] = `
+<div
+  className="sc-AxjAm TGrhY"
+  data-testid="select"
+>
+  <label
+    htmlFor="select"
+  >
+    select
+  </label>
+  <select
+    className="form-control"
+    id="select"
+    onChange={[Function]}
+    value="select"
+  >
+    <option
+      value="1"
+    >
+      Option 1
+    </option>
+    <option
+      value="2"
+    >
+      Option 2
+    </option>
+    <option
+      value="3"
+    >
+      Option 3
+    </option>
+  </select>
+  <svg>
+    arrow-down.svg
+  </svg>
+</div>
+`;
+
+exports[`Select Component Select matches snapshot when tocuhed 1`] = `
+<div
+  className="sc-AxjAm ihCCfy"
+  data-testid="select"
+  disabled={true}
+>
+  <label
+    htmlFor="select"
+  >
+    select
+  </label>
+  <select
+    className="form-control"
+    disabled={true}
+    id="select"
+    onChange={[Function]}
+    value=""
+  >
+    <option
+      value="1"
+    >
+      Option 1
+    </option>
+    <option
+      value="2"
+    >
+      Option 2
+    </option>
+    <option
+      value="3"
+    >
+      Option 3
+    </option>
+  </select>
+  <svg>
+    arrow-down.svg
+  </svg>
+</div>
+`;

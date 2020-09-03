@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Input Component Input matches snapshot 1`] = `
+<div
+  className="sc-AxjAm gwhofU"
+  data-testid="input"
+>
+  <label
+    htmlFor="text"
+  >
+    text
+  </label>
+  <input
+    className="form-control"
+    data-testid="inputs"
+    id="input"
+    onChange={[Function]}
+    placeholder="Enter Text Here"
+    type="text"
+    value="12345"
+  />
+</div>
+`;
+
+exports[`Input Component Input matches snapshot when type is number 1`] = `
+<div
+  className="sc-AxjAm gwhofU"
+  data-testid="input"
+>
+  <label
+    htmlFor="text"
+  >
+    text
+  </label>
+  <input
+    className="form-control"
+    data-testid="inputs"
+    id="input"
+    onChange={[Function]}
+    placeholder="Enter Text Here"
+    type="number"
+    value="12345"
+  />
+</div>
+`;

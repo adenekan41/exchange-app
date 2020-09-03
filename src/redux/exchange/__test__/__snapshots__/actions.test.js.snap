@@ -1,0 +1,83 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Take Test Action Dispatches the correct action and payload for exchanging currency 1`] = `
+Array [
+  Object {
+    "payload": "USD",
+    "type": "UPDATE_FROM_CURRENT_WALLET",
+  },
+  Object {
+    "payload": "USD",
+    "type": "UPDATE_TO_CURRENT_WALLET",
+  },
+  Object {
+    "payload": Object {
+      "EUR": Object {
+        "amount": 730,
+      },
+      "GBP": Object {
+        "amount": 500,
+      },
+      "USD": Object {
+        "amount": 390,
+      },
+    },
+    "type": "EXCHANGE_CURRENCY",
+  },
+]
+`;
+
+exports[`Take Test Action Dispatches the correct action and payload for getting latest rates failure 1`] = `
+Array [
+  Object {
+    "payload": "USD",
+    "type": "UPDATE_FROM_CURRENT_WALLET",
+  },
+  Object {
+    "payload": "USD",
+    "type": "UPDATE_TO_CURRENT_WALLET",
+  },
+  Object {
+    "payload": Object {
+      "EUR": Object {
+        "amount": 730,
+      },
+      "GBP": Object {
+        "amount": 500,
+      },
+      "USD": Object {
+        "amount": 390,
+      },
+    },
+    "type": "EXCHANGE_CURRENCY",
+  },
+  Object {
+    "type": "GET_CURRENCY",
+  },
+  Object {
+    "type": "GET_CURRENCY_FAIL",
+  },
+]
+`;
+
+exports[`Take Test Action Dispatches the correct action and payload for updating FROM state 1`] = `
+Array [
+  Object {
+    "payload": "USD",
+    "type": "UPDATE_FROM_CURRENT_WALLET",
+  },
+]
+`;
+
+exports[`Take Test Action Dispatches the correct action and payload for updating TO state 1`] = `
+Array [
+  Object {
+    "payload": "USD",
+    "type": "UPDATE_FROM_CURRENT_WALLET",
+  },
+  Object {
+    "payload": "USD",
+    "type": "UPDATE_TO_CURRENT_WALLET",
+  },
+]
+`;

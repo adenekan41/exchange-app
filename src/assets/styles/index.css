@@ -7,10 +7,6 @@
 :root {
   --theme-primary: #0089e1;
   --white: #fafafa;
-  --accent: #062e64;
-  --alert-success: #438875;
-  --alert-danger: #da3451;
-  --sidebar-width: 260px;
   --gray: #8f9bb3;
   --font-primary: 'Manrope GTLD';
 }
@@ -75,22 +71,4 @@ html {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-.btn-developp {
-  background: var(--theme-primary);
-  box-shadow: none;
-  border-radius: 6px;
-  border: none;
-}
-
-.btn-developp:hover {
-  opacity: 0.8;
-  color: #fff;
-}
-
-@media screen and (max-width: 935px) {
-  :root {
-    --sidebar-width: 0px !important;
-  }
 }

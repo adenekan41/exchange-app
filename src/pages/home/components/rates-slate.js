@@ -1,7 +1,7 @@
 /* -------------------------------------------------------------------------- */
 /*                            External Dependencies                           */
 /* -------------------------------------------------------------------------- */
-import React, { useEffect } from 'react';
+import React, { useEffect, memo } from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
@@ -24,27 +24,29 @@ const propTypes = {
 	to: PropTypes.string,
 };
 
-const RateSlate = ({ getLatestRates: loadLatestRates, rate, from, to }) => {
-	useEffect(() => {
-		// Load Rates On Mount
-		loadLatestRates(from, to);
-
-		// Load Rates after every 10mins
-		const intervalId = setInterval(() => {
+const RateSlate = memo(
+	({ getLatestRates: loadLatestRates, rate, from, to }) => {
+		useEffect(() => {
+			// Load Rates On Mount
 			loadLatestRates(from, to);
-		}, 100000);
 
-		// Clean up
-		return () => clearInterval(intervalId);
-	}, [loadLatestRates, from, to]);
+			// Load Rates after every 10mins
+			const intervalId = setInterval(() => {
+				loadLatestRates(from, to);
+			}, 10000);
 
-	return (
-		<H4>
-			1{getCurrencySymbol(from)} = {rate.toFixed(3)}
-			{getCurrencySymbol(to)}
-		</H4>
-	);
-};
+			// Clean up
+			return () => clearInterval(intervalId);
+		}, [loadLatestRates, from, to]);
+
+		return (
+			<H4>
+				1{getCurrencySymbol(from)} = {rate.toFixed(3)}
+				{getCurrencySymbol(to)}
+			</H4>
+		);
+	}
+);
 
 const H4 = styled.h4`
 	text-align: center;

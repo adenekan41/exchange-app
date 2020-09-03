@@ -128,7 +128,7 @@ const ExchangeWallet = ({
 							onClick={() => {
 								exchangeCurrency(state, from, to);
 								setState({
-									from: 0,
+									from: '',
 									to: 0,
 								});
 							}}

@@ -27,7 +27,6 @@ const propTypes = {
 const RateSlate = ({ getLatestRates: loadLatestRates, rate, from, to }) => {
 	useEffect(() => {
 		// Load Rates On Mount
-
 		loadLatestRates(from, to);
 
 		// Load Rates after every 10mins

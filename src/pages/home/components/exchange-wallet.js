@@ -21,7 +21,11 @@ import {
 	selectBalance,
 	selectCurrentExchangeRate,
 } from 'redux/exchange/selectors';
-import { getCurrencySymbol, calculateCurrency } from 'utils';
+import {
+	getCurrencySymbol,
+	calculateCurrency,
+	checkBalanceWithAmount,
+} from 'utils';
 
 /* ------------------------ ExchangeWallet propTypes ------------------------ */
 const propTypes = {
@@ -56,11 +60,11 @@ const ExchangeWallet = ({
 	const handleOnChangeAndUpdate = (e) => {
 		setState({
 			...state,
-			from:
-				e.target.value > balance[from].amount
-					? balance[from].amount
-					: e.target.value,
-			to: calculateCurrency(e.target.value, rate),
+			from: checkBalanceWithAmount(e.target.value, balance[from].amount),
+			to: calculateCurrency(
+				checkBalanceWithAmount(e.target.value, balance[from].amount),
+				rate
+			),
 		});
 	};
 

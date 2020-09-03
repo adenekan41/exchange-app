@@ -9,7 +9,6 @@
 <br />
 <h2 align="center">Revolut Exchange App</h2>
 
-<br />
 <h3 align="center">
 	<a href="https://revolut-exchange-app.surge.sh">
 		View Live Preview

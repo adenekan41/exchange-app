@@ -25,6 +25,7 @@ import {
 	getCurrencySymbol,
 	calculateCurrency,
 	checkBalanceWithAmount,
+	isNumberKey,
 } from 'utils';
 
 /* ------------------------ ExchangeWallet propTypes ------------------------ */
@@ -53,17 +54,36 @@ const ExchangeWallet = ({
 	// Set Initial State for currency from and to
 	const [state, setState] = useState({
 		from: '',
-		to: 0,
+		to: '',
 	});
 
-	// Handle Onchanage and Update the state value
-	const handleOnChangeAndUpdate = (e) => {
+	// Handle Onchanage To conversion and Update the state value
+	const handleToOnChangeAndUpdate = (e) => {
 		setState({
 			...state,
-			from: checkBalanceWithAmount(e.target.value, balance[from].amount),
-			to: calculateCurrency(
-				checkBalanceWithAmount(e.target.value, balance[from].amount),
+			to: checkBalanceWithAmount(
+				Math.abs(e.target.value),
+				balance[from].amount
+			),
+			from: calculateCurrency(
+				checkBalanceWithAmount(Math.abs(e.target.value), balance[from].amount),
 				rate
+			),
+		});
+	};
+
+	// Handle Onchanage from conversion and Update the state value
+	const handleFromOnChangeAndUpdate = (e) => {
+		setState({
+			...state,
+			from: checkBalanceWithAmount(
+				Math.abs(e.target.value),
+				balance[from].amount
+			),
+			to: calculateCurrency(
+				checkBalanceWithAmount(Math.abs(e.target.value), balance[from].amount),
+				rate,
+				'from'
 			),
 		});
 	};
@@ -72,7 +92,7 @@ const ExchangeWallet = ({
 	useEffect(() => {
 		setState({
 			from: '',
-			to: 0,
+			to: '',
 		});
 	}, [from, to]);
 
@@ -111,7 +131,8 @@ const ExchangeWallet = ({
 								<Input
 									value={state.from}
 									name="from"
-									onChange={handleOnChangeAndUpdate}
+									onKeyDown={isNumberKey}
+									onChange={handleFromOnChangeAndUpdate}
 									type="number"
 									label={`Exchange ${from} -> ${to}`}
 									placeholder="0.00"
@@ -120,7 +141,6 @@ const ExchangeWallet = ({
 						</Wallet>
 					</div>
 
-					{/* Exchange Button */}
 					<div className="col-lg-2 d-md-flex align-items-center my-5 my-md-0">
 						<button
 							className="btn btn-primary btn-block"
@@ -129,15 +149,14 @@ const ExchangeWallet = ({
 								exchangeCurrency(state, from, to);
 								setState({
 									from: '',
-									to: 0,
+									to: '',
 								});
 							}}
-							disabled={state.from === 0}
+							disabled={!Number(state.from)}
 						>
 							Exchange
 						</button>
 					</div>
-					{/* End Exchange Button */}
 
 					<div className="col-lg">
 						<Wallet className="card">
@@ -160,17 +179,24 @@ const ExchangeWallet = ({
 								<h1>
 									{getCurrencySymbol(to)} {balance[to].amount.toFixed(2)}
 								</h1>
+
 								{state.to > 0 && (
 									<h5 className="col-green">
 										+ {getCurrencySymbol(to)} {state.to}
 									</h5>
 								)}
 							</div>
+
 							<div className="conversion__card">
-								<p>You Get</p>
-								<h4>
-									{getCurrencySymbol(to)} {state.to.toFixed(3)}
-								</h4>
+								<Input
+									value={state.to}
+									onKeyDown={isNumberKey}
+									name="from"
+									onChange={handleToOnChangeAndUpdate}
+									type="number"
+									label={`Exchange ${to} <- ${from}`}
+									placeholder="0.00"
+								/>
 							</div>
 						</Wallet>
 					</div>

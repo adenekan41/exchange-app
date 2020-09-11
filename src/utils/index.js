@@ -9,12 +9,13 @@ export const getCurrencySymbol = (currency) => {
 };
 
 /**
- *
+ * @param {String} type
  * @param {Number} amount
  * @param {Number} rate
  */
-export const calculateCurrency = (amount, rate) => {
-	return amount * rate;
+export const calculateCurrency = (amount, rate, type) => {
+	if (type === 'from') return amount * rate;
+	return amount / rate;
 };
 
 /**
@@ -27,4 +28,20 @@ export const checkBalanceWithAmount = (amount, balance) => {
 		return balance;
 	}
 	return amount;
+};
+
+/**
+ * prevent negative values with key code
+ * @param {Object} evt
+ */
+export const isNumberKey = (e) => {
+	if (
+		!(
+			(e.keyCode > 95 && e.keyCode < 106) ||
+			(e.keyCode > 47 && e.keyCode < 58) ||
+			e.keyCode === 8
+		)
+	) {
+		return false;
+	}
 };

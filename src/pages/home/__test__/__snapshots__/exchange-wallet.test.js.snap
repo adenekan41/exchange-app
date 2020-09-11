@@ -88,6 +88,7 @@ exports[`ExchangeWallet Component ExchangeWallet matches snapshot 1`] = `
                 id="0"
                 name="from"
                 onChange={[Function]}
+                onKeyDown={[Function]}
                 placeholder="0.00"
                 type="number"
                 value=""
@@ -101,7 +102,7 @@ exports[`ExchangeWallet Component ExchangeWallet matches snapshot 1`] = `
       >
         <button
           className="btn btn-primary btn-block"
-          disabled={false}
+          disabled={true}
           onClick={[Function]}
           type="button"
         >
@@ -171,14 +172,27 @@ exports[`ExchangeWallet Component ExchangeWallet matches snapshot 1`] = `
           <div
             className="conversion__card"
           >
-            <p>
-              You Get
-            </p>
-            <h4>
-              €
-               
-              0.000
-            </h4>
+            <div
+              className="sc-AxjAm boKlPC"
+              data-testid="input"
+            >
+              <label
+                htmlFor="Exchange EUR <- USD"
+              >
+                Exchange EUR &lt;- USD
+              </label>
+              <input
+                className="form-control"
+                data-testid="inputs"
+                id="0"
+                name="from"
+                onChange={[Function]}
+                onKeyDown={[Function]}
+                placeholder="0.00"
+                type="number"
+                value=""
+              />
+            </div>
           </div>
         </div>
       </div>
@@ -275,6 +289,7 @@ exports[`ExchangeWallet Component ExchangeWallet matches snapshot without action
                 id="0"
                 name="from"
                 onChange={[Function]}
+                onKeyDown={[Function]}
                 placeholder="0.00"
                 type="number"
                 value=""
@@ -288,7 +303,7 @@ exports[`ExchangeWallet Component ExchangeWallet matches snapshot without action
       >
         <button
           className="btn btn-primary btn-block"
-          disabled={false}
+          disabled={true}
           onClick={[Function]}
           type="button"
         >
@@ -358,14 +373,27 @@ exports[`ExchangeWallet Component ExchangeWallet matches snapshot without action
           <div
             className="conversion__card"
           >
-            <p>
-              You Get
-            </p>
-            <h4>
-              €
-               
-              0.000
-            </h4>
+            <div
+              className="sc-AxjAm boKlPC"
+              data-testid="input"
+            >
+              <label
+                htmlFor="Exchange EUR <- USD"
+              >
+                Exchange EUR &lt;- USD
+              </label>
+              <input
+                className="form-control"
+                data-testid="inputs"
+                id="0"
+                name="from"
+                onChange={[Function]}
+                onKeyDown={[Function]}
+                placeholder="0.00"
+                type="number"
+                value=""
+              />
+            </div>
           </div>
         </div>
       </div>

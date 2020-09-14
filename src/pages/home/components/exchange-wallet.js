@@ -194,7 +194,7 @@ const ExchangeWallet = ({
 									name="from"
 									onChange={handleToOnChangeAndUpdate}
 									type="number"
-									label={`Exchange ${to} <- ${from}`}
+									label={`Exchange ${from} -> ${to}`}
 									placeholder="0.00"
 								/>
 							</div>

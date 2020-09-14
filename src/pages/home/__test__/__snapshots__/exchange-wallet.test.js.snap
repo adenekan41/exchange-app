@@ -177,9 +177,9 @@ exports[`ExchangeWallet Component ExchangeWallet matches snapshot 1`] = `
               data-testid="input"
             >
               <label
-                htmlFor="Exchange EUR <- USD"
+                htmlFor="Exchange USD -> EUR"
               >
-                Exchange EUR &lt;- USD
+                Exchange USD -&gt; EUR
               </label>
               <input
                 className="form-control"
@@ -378,9 +378,9 @@ exports[`ExchangeWallet Component ExchangeWallet matches snapshot without action
               data-testid="input"
             >
               <label
-                htmlFor="Exchange EUR <- USD"
+                htmlFor="Exchange USD -> EUR"
               >
-                Exchange EUR &lt;- USD
+                Exchange USD -&gt; EUR
               </label>
               <input
                 className="form-control"
